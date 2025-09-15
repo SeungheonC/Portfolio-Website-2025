@@ -1,0 +1,235 @@
+section [class^="container"] {
+  padding: 4rem 2rem;
+}
+@media screen and (min-width: 1024px) {
+  section [class^="container"] {
+    padding: 4rem;
+  }
+  nav [class^="container"] {
+    padding: 0 4rem;
+  }
+}
+
+section:not(:first-of-type) {
+  text-align: center;
+}
+
+section:nth-child(2n) {
+  background-color: #ecf2ff;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+a:not(.btn):hover {
+  color: #f5a841;
+}
+
+section .card,
+.btn-outline-dark {
+  border: 2px solid #000000;
+  box-shadow: 4px 4px #000000;
+  transition: all 0.4s;
+}
+.btn-outline-dark:hover {
+  box-shadow: 4px 4px #f5a841;
+}
+section .card {
+  max-width: 22rem;
+  margin-inline: auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* NAVBAR */
+
+.navbar {
+  background-color: #ffffff;
+}
+
+.navbar-nav .nav-link {
+  color: #000000;
+  font-size: 1.1rem;
+  transition: all 0.5s;
+}
+.navbar-nav .nav-link:hover {
+  color: #f5a841;
+}
+@media screen and (min-width: 1024px) {
+  .navbar-nav .nav-item {
+    padding: 0 1rem;
+  }
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+}
+
+/* HERO */
+
+section.hero {
+  padding-top: 72px;
+}
+@media screen and (max-width: 576px) {
+  section.hero {
+    text-align: center;
+  }
+  section.hero .img-fluid {
+    width: 70%;
+  }
+}
+
+/* SERVICES */
+
+section.services i {
+  font-size: 2rem;
+  margin: 1rem auto 0;
+  border: 2px solid #000000;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5a841;
+}
+
+/* ABOUT */
+
+@media screen and (min-width: 1024px) {
+  section.about .container,
+  section.testimonials .container {
+    width: 75%;
+  }
+}
+/* 카드 크기 설정 */
+section.projects .card {
+  max-width: 17rem; /* 카드의 최대 너비 */
+  height: 28rem;    /* 카드의 고정 높이 */
+  overflow: hidden;
+  text-align: center;
+  margin: 1rem auto; /* 카드 간 간격 */
+  border: 2px solid #000;
+  border-radius: 8px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  height: auto; /* 높이를 auto로 설정하여 카드 크기 자동 조정 */
+}
+
+/* 카드 내부 이미지 정렬 및 크기 조정 */
+.card.hadoop-card .card-images {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.card.hadoop-card .card-images img {
+  width: 48%;  /* 두 이미지가 카드의 약 48% 크기를 차지 */
+  height: 150px;  /* 고정된 높이 */
+  object-fit: cover;  /* 이미지가 잘리지 않게 채움 */
+  border-radius: 8px;  /* 이미지 모서리 둥글게 */
+}
+
+/* 카드 스타일 */
+.card.hadoop-card {
+  text-align: center;
+  border: 2px solid #000;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 카드 본문 스타일 */
+.card-body {
+  padding: 1rem;
+}
+
+/* 카드 이미지들을 하나의 그룹으로 묶어 정렬 */
+section.projects .card .card-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+section.projects .card .card-images img {
+  max-width: 90px;
+  height: 90px; /* 추가: 고정 높이 지정 */
+  object-fit: contain; /* 이미지가 잘리지 않고 꽉 차도록 */
+}
+
+/* 이미지를 일정한 크기로 제한 */
+section.projects .card .card-images img {
+  max-width: 90px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* 두 개 이미지 레이아웃 */
+.card-img-grid {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  justify-content: center;
+}
+
+.card-img-grid img {
+  width: 48%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Project 5와 같은 요소들이 옆으로 배치되도록 */
+@media (min-width: 576px) {
+  .projects .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .projects .col-lg-4, .projects .col-sm-6 {
+    flex: 1;
+    margin: 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-img-grid {
+    flex-direction: column;
+  }
+
+  .card-img-grid img {
+    width: 100%;
+  }
+}
+
+/* TESTIMONIALS */
+
+section.testimonials .carousel-control-prev,
+section.testimonials .carousel-control-next {
+  width: 5%;
+}
+
+section.testimonials .carousel-item p {
+  max-width: 80%;
+  border-left: 5px solid #f5a841;
+  padding-left: 1rem;
+}
+section.testimonials .carousel-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section.testimonials .carousel.carousel-fade .carousel-item {
+  transition: opacity 0.5s;
+}
+
+/* CONTACT */
+
+section.contact .social-media a {
+  padding: 0 0.5rem;
+  font-size: 1.3rem;
+}
